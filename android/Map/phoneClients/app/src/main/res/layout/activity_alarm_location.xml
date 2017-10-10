@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></com.amap.api.maps.MapView>
+
+            <RadioGroup
+                android:id="@+id/gps_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/gps_locate_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/gpslocate"
+                    android:textColor="@android:color/black" />
+
+                <RadioButton
+                    android:id="@+id/gps_follow_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gpsfollow"
+                    android:textColor="@android:color/black" />
+
+                <RadioButton
+                    android:id="@+id/gps_rotate_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gpsrotate"
+                    android:textColor="@android:color/black" />
+            </RadioGroup>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        android:orientation="vertical">
+
+        <!--<EditText-->
+        <!--android:id="@+id/et_alarm"-->
+        <!--android:layout_width="130dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/margin_middle"-->
+        <!--android:ems="10"-->
+        <!--android:hint="5"-->
+        <!--android:inputType="number"-->
+        <!--android:layout_above="@+id/et_interval"-->
+        <!--android:layout_alignStart="@+id/et_interval"-->
+        <!--android:layout_gravity="center_horizontal">-->
+
+        <!--<requestFocus />-->
+        <!--</EditText>-->
+
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/alarmInterval"-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_alignBottom="@+id/et_interval"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/et_interval"-->
+        <!--android:layout_width="130dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/margin_middle"-->
+        <!--android:ems="10"-->
+        <!--android:hint="@string/defaultInteval"-->
+        <!--android:inputType="number"-->
+        <!--android:layout_above="@+id/bt_location"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_gravity="center_horizontal">-->
+
+        <!--<requestFocus />-->
+        <!--</EditText>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_info"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/interval"-->
+        <!--android:layout_above="@+id/et_interval"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/bt_location"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/startLocation"-->
+        <!--android:layout_gravity="center_horizontal|bottom"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+        <!--<CheckBox-->
+        <!--android:id="@+id/cb_needAddress"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:checked="true"-->
+        <!--android:text="@string/needAddress"-->
+        <!--android:layout_gravity="left|bottom"-->
+        <!--android:layout_alignBottom="@+id/bt_location"-->
+        <!--android:layout_alignParentStart="true" />-->
+        <!--<CheckBox-->
+        <!--android:id="@+id/cb_gpsFirst"-->
+        <!--android:layout_width="10dp"-->
+        <!--android:layout_height="10dp"-->
+        <!--android:text="@string/gpsFirst"-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignEnd="@+id/textView" />-->
+
+        <LinearLayout
+            android:id="@+id/layout_interval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin">
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/interval" />
+
+            <EditText
+                android:id="@+id/et_interval"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_middle"
+                android:text="30"
+                android:ems="10"
+                android:hint="@string/defaultInteval"
+                android:inputType="number">
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_middle"
+                android:text="@string/second" />
+
+            <Button
+                android:id="@+id/bt_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/startLocation" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alarmInterval" />
+
+            <EditText
+                android:id="@+id/et_alarm"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_middle"
+                android:text="10"
+                android:ems="10"
+                android:hint="10"
+                android:inputType="number">
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_middle"
+                android:text="@string/second" />
+
+            <CheckBox
+                android:id="@+id/cb_needAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/needAddress" />
+
+            <CheckBox
+                android:id="@+id/cb_gpsFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gpsFirst"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/normal_margin">
+
+            <TextView
+                android:id="@+id/location_statusInfo_text"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom|left"
+                android:singleLine="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

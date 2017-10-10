@@ -1,0 +1,395 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="44dp"-->
+        <!--android:background="@drawable/title">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="智能家居"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:textSize="20sp" />-->
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/tempRelative"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/tempback">
+
+        <ImageView
+            android:id="@+id/tempIm"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/temp" />
+
+        <ImageView
+            android:id="@+id/tempLine"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@id/tempLine"
+            android:gravity="center"
+            android:text="温度"
+            android:textColor="#696969" />
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tempIm"
+            android:text="20"
+            android:textColor="#696969"
+            android:textSize="45sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/temp"
+            android:layout_toRightOf="@id/temp"
+            android:gravity="center"
+            android:text="℃"
+            android:textColor="#696969"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/hehumIm"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/tempLine"
+            android:background="@drawable/hehum" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="湿度"
+            android:textColor="#696969" />
+
+        <TextView
+            android:id="@+id/hehum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/hehumIm"
+            android:text="20"
+            android:textColor="#696969"
+            android:textSize="45sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/hehum"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/hehum"
+            android:text="%"
+            android:textColor="#696969"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/lightback"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/eleIM"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/jidian" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/eleIM"
+                android:gravity="center"
+                android:text="继电器"
+                android:textColor="#696969" />
+
+            <Button
+                android:id="@+id/eleSwitch"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/off" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/line"></LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/lightIm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/lightIm"
+                android:gravity="center"
+                android:text="灯"
+                android:textColor="#696969" />
+
+            <Button
+                android:id="@+id/ledSwitch"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/off" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/electricback">
+
+        <RelativeLayout
+            android:id="@+id/elelicLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"></RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/elelicLine"
+            android:background="@drawable/electric">
+
+            <Button
+                android:id="@+id/stopButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:background="@null" />
+
+            <Button
+                android:id="@+id/leftButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignBaseline="@id/stopButton"
+                android:layout_toLeftOf="@id/stopButton"
+                android:background="@null" />
+
+            <Button
+                android:id="@+id/rightButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignBaseline="@id/stopButton"
+                android:layout_toRightOf="@id/stopButton"
+                android:background="@null" />
+
+            <Button
+                android:id="@+id/upButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_above="@id/stopButton"
+                android:layout_toRightOf="@id/leftButton"
+                android:background="@null" />
+
+            <Button
+                android:id="@+id/downButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/stopButton"
+                android:layout_toRightOf="@id/leftButton"
+                android:background="@null" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/ele" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/lightback">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/timer" />
+
+        <TextView
+            android:id="@+id/hourT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="时"
+            android:textColor="#696969" />
+
+        <Button
+            android:id="@+id/hourButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/hourT"
+            android:background="@drawable/number"
+            android:text="10"
+            android:textColor="#696969" />
+
+        <Button
+            android:id="@+id/minuteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/hourT"
+            android:background="@drawable/number"
+            android:text="10"
+            android:textColor="#696969" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/minuteButton"
+            android:text="分"
+            android:textColor="#696969" />
+
+        <Button
+            android:id="@+id/alertSwitch"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/off" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:gravity="center"
+            android:text="闹钟"
+            android:textColor="#696969" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/adcback">
+
+        <ImageView
+            android:id="@+id/adcIM"
+            android:layout_width="80dp"
+            android:layout_height="85dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/adc" />
+
+        <TextView
+            android:id="@+id/vvT"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/adcIM"
+            android:text="当前电压"
+            android:textColor="#696969" />
+
+        <Button
+            android:id="@+id/vTB"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/vvT"
+            android:background="@drawable/number"
+            android:text="12V" />
+
+        <TextView
+            android:id="@+id/setvT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/adcIM"
+            android:gravity="bottom"
+            android:text="设定电压"
+            android:textColor="#696969" />
+
+        <SeekBar
+            android:id="@+id/svS"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/setvT"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/setvT"
+            android:max="33"
+            android:maxHeight="18px"
+            android:minHeight="18px" />
+    </RelativeLayout>
+
+</LinearLayout>

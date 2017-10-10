@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/regeoButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="ResGeoCoding(40.003662, 116.465271)"></Button>
+
+    <Button
+        android:id="@+id/geoButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="GeoCoding(方恒国际中心)"></Button>
+
+    <!--高德 2D Map-->
+    <!--<com.amap.api.maps2d.MapView-->
+    <!--android:id="@+id/map"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <!--高德 3D Map-->
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

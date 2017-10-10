@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_id">56e7cb3a</string>
+    <string name="app_name">智能家居</string>
+    <string name="voice">语音</string>
+    <string name="about">关于</string>
+    <string name="aboutus">本作品旨在利用手机APP通过wifi模块与单片机进行简单的通讯，进行简单的电器控制。后期我们有重新开发了语音借口，希望可以通过语音对电器进行控制并制作了一个语音控制LED灯的DEMO</string>
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+    <!-- 听写 -->
+    <string name="text_begin">请开始说话…</string>
+    <!-- 语言 -->
+    <string-array name="language_entries">
+        <item>普通话</item>
+        <item>粤语</item>
+        <item>河南话</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>mandarin</item>
+        <item>cantonese</item>
+        <item>henanese</item>
+        <item>en_us</item>
+    </string-array>
+    <!-- 标点符号 -->
+    <string-array name="punc_entries">
+        <item>有标点</item>
+        <item>无标点</item>
+    </string-array>
+    <string-array name="punc_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="dwa_entries">
+        <item>开启</item>
+        <item>关闭</item>
+    </string-array>
+</resources>
