@@ -1,0 +1,24 @@
+## error test 01
+```
+squirrel_0a9e895a197a476098bb525ba5eb6e0a.jpg 3 fox 0.62225 10 hyena 0.175984
+giraffe_0a05a32bd71d493e982efc00c176c7ed.gif 5 wolf 0.32816 2 sikadeer 0.317696
+squirrel_0a14d62a7b05490086facf741ba92055.jpg 6 cat 0.724941 1 squirrel 0.209865
+dog_0a1d447318a64604a38681dfe9436c8f.jpg 3 fox 0.779176 2 sikadeer 0.109778
+fox_0a3c703cad834d94a4a76634dbe8fec1.jpg 5 wolf 0.861716 3 fox 0.123957
+chipmunk_0a00e2642c9d4ee590a0a6a11a2973c7.jpg 11 weasel 0.428051 7 chipmunk 0.150295
+weasel_0a1a8ab6b8fc4989adc37513fadd5fe3.jpg 1 squirrel 0.572586 11 weasel 0.116241
+hyena_0a1c959be39649b0ab1eae99d49e2d31.jpg 8 giraffe 0.794538 2 sikadeer 0.0761909
+hyena_0a99a7892e3441ccbf2baafe00ee6f69.jpg 3 fox 0.588097 6 cat 0.160621
+```
+## error test 02
+```
+squirrel_0a9e895a197a476098bb525ba5eb6e0a.jpg 3 fox 0.558735 1 squirrel 0.228298
+giraffe_0a05a32bd71d493e982efc00c176c7ed.gif 2 sikadeer 0.398334 5 wolf 0.250507
+dog_0a1d447318a64604a38681dfe9436c8f.jpg 3 fox 0.516654 2 sikadeer 0.352608
+fox_0a3c703cad834d94a4a76634dbe8fec1.jpg 5 wolf 0.850092 3 fox 0.104354
+weasel_0a1a8ab6b8fc4989adc37513fadd5fe3.jpg 1 squirrel 0.356 11 weasel 0.236992
+hyena_0a1c959be39649b0ab1eae99d49e2d31.jpg 8 giraffe 0.711816 2 sikadeer 0.156074
+weasel_0a01b936023d4358b4fe8fb560312bc7.jpg 0 guinea_pig 0.292029 10 hyena 0.169487
+hyena_0a99a7892e3441ccbf2baafe00ee6f69.jpg 3 fox 0.631238 5 wolf 0.118629
+cat_0a8bbff7b208490b905cc8b62612bdbc.jpg 5 wolf 0.378346 2 sikadeer 0.224094
+```

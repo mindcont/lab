@@ -1,0 +1,56 @@
+#!/usr/bin/python
+# encoding: UTF-8
+
+# draw models
+python /home/pi/caffe/python/draw_net.py \
+/home/pi/data/bot/models/bvlc_reference_caffenet/train_val.prototxt \
+/home/pi/data/bot/models/bvlc_reference_caffenet/train_val.png
+
+# TestAccuracy  Iters
+python /home/pi/caffe/tools/extra/plot_training_log.py 0 \
+/home/pi/data/bot/models/bvlc_reference_caffenet/log/bvlc_reference_caffenet_0.png \
+/home/pi/data/bot/models/bvlc_reference_caffenet/log/bvlc_reference_caffenet_train_2016-09-04-16-04-43.log
+
+# TestLoss  Iters
+python /home/pi/caffe/tools/extra/plot_training_log.py 2 \
+/home/pi/data/bot/models/bvlc_reference_caffenet/log/bvlc_reference_caffenet_2.png \
+/home/pi/data/bot/models/bvlc_reference_caffenet/log/bvlc_reference_caffenet_train_2016-09-04-16-04-43.log
+
+# Train learning rate  vs. Iters
+python /home/pi/caffe/tools/extra/plot_training_log.py 3 \
+/home/pi/data/bot/models/bvlc_reference_caffenet/log/bvlc_reference_caffenet_3.png \
+/home/pi/data/bot/models/bvlc_reference_caffenet/log/bvlc_reference_caffenet_train_2016-09-04-16-04-43.log
+
+#
+python draw_loss.py -log ../../models/bvlc_reference_caffenet/log/bvlc_reference_caffenet_train_2016-09-12-17-56-04.log
+
+#
+python draw_loss.py -log ../../models/bvlc_googlenet/log/bvlc_googlenet_train_2016-09-06-11-37-35.log
+
+python /home/pi/caffe/tools/extra/plot_training_log.py 0 \
+/home/pi/data/bot/models/bvlc_googlenet/log/bvlc_googlenet_0.png \
+/home/pi/data/bot/models/bvlc_googlenet/log/bvlc_googlenet_train_2016-09-06-11-37-35.log
+#
+python draw_loss.py -log ../../models/bvlc_reference_caffenet/log/bvlc_reference_caffenet_train_2016-09-18-20-33-09.log
+
+python /home/pi/caffe/tools/extra/plot_training_log.py 2 \
+/home/pi/data/bot/models/bvlc_alexnet/log/bvlc_alexnet_new_2.png \
+/home/pi/data/bot/models/bvlc_alexnet/log/bvlc_alexnet_train_2016-09-20-10-53-56.log
+
+#
+python /home/pi/caffe/python/draw_net.py \
+/home/pi/data/bot/models/vgg_16/vgg_16_deploy.prototxt \
+/home/pi/data/bot/models/vgg_16/vgg_16_deploy.png
+
+python /home/pi/caffe/python/draw_net.py \
+./squeezenet.prototxt \
+./squeezenet.png
+
+
+#
+python /home/pi/caffe/tools/extra/plot_training_log.py 0 \
+/home/pi/data/bot/models/VGG_ILSVRC_16_layers/log/VGG_ILSVRC_16_layers_0.png \
+/home/pi/data/bot/models/VGG_ILSVRC_16_layers/log/VGG_ILSVRC_16_layers_train_2016-09-11-12-17-10.log
+
+
+python draw_loss.py -log ../../models/vgg_16/log/vgg_16_train_2016-09-21-18-02-01.log
