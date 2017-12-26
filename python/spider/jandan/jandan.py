@@ -1,6 +1,12 @@
 ﻿#!/usr/bin/python
 # -*- coding:utf-8 -*-
 
+'''
+@description 煎蛋网爬虫, 图片url地址保存到指定文件夹 jandan-sinaimg-url.txt
+@autor 刘文进
+@url http://t.cn/RY9XG5i
+'''
+
 import threading
 import requests
 import re
@@ -13,13 +19,13 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 
 # 下载目录
-Directory = '/var/www/images2/'
+Directory = 'C:/work/meizi/'
 # 存储获取开始网页地址的地址
 start_url = 'http://jandan.net/ooxx'
 # 存储User-Agent
 header = []
 # 存储开始网页地址
-start_page = 760
+start_page = 1912
 # 线程上限
 Maxthreads = 4
 # 存储线程数量
@@ -62,12 +68,7 @@ def main(page):
                         'img', src=True)
                 for n, girl in enumerate(img):
                     if not girl.has_attr('org_src'):
-                        url = girl['src']
-			#处理标签中 http：头的问题
-			if url.split('/')[0] == "http:":
-			    url = url
-			else:
-			    url = "http:"+ url
+                        url = "http:"+girl['src']
                         # 保存图片新浪图床地址
                         with open('jandan-sinaimg-url.txt','a+') as f:
                             print >>f,url,'\t',str(page)
@@ -75,11 +76,7 @@ def main(page):
                         with open(Directory + 'jandan.net' +'-'+ str(page) + '-' + str(n)+ '_'+ url.split('/')[4], 'wb') as f:
                             f.write(requests.get(url).content)
                     else:
-			url = girl['src']
-			if url.split('/')[0] == "http:":
-			    url = url
-			else:
-		            url = "http:" + url
+                        url = "http:"+girl['org_src']
                         # 保存图片新浪图床地址
                         with open('jandan-sinaimg-url.txt','a+') as f:
                             print >>f,url,'\t',str(page)
@@ -96,11 +93,13 @@ def main(page):
                         print('反屏蔽失败,线程终止!\nUser-Agent 可用信息:')
                         return False
 
+
 # 创建多线程
 def creatBackGroundThreads():
     for i in range(threadnum):
         allthread.append(Async(start_page - i - 1))
         allthread[i].start()
+
 
 # 当前线程
 def currentThreads():
@@ -111,6 +110,7 @@ def currentThreads():
                 main(pages)
             else:
                 return False
+
 
 # 多线程类
 class Async(threading.Thread):
@@ -132,16 +132,15 @@ header = obtainAgentStrings()
 # Init User-Agent可用信息
 header_Available = [None for i in range(len(header))]
 
-
 # 获得 start_page
 for i in range(len(header)):
     rs = requests.get(start_url, headers=header[i])
     rs.encoding = 'utf-8'
     soups = BeautifulSoup(rs.text, "html5lib")
     if soups.find(text=re.compile('屏蔽')) == None:
-        #start_page = int(
-        #    soups.body.find(
-        #        'span', class_='current-comment-page').contents[0][1:-1])
+        # start_page = int(
+        #     soups.body.find(
+        #         'span', class_='current-comment-page').contents[0][1:-1])
         numberOfPages = int(input('输入爬取的页数: '))
         threadnum = int(input('输入线程数(线程数量上限' + str(Maxthreads) + '): ')) % (
             Maxthreads + 1) - 1
